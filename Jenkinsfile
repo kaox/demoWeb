@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                dir("demoWeb"){
+                dir("demoWeb"){ 
                     //sh 'curl -T /var/jenkins_home/workspace/demo/demoWeb/target/demo.war http://admin:admin@ef573abf.ngrok.io/manager/text/deploy?path=/prueba&update=true'
                     sh 'wget "http://admin:admin@ef573abf.ngrok.io/manager/text/deploy?path=/prueba&update=true&war=file:/var/jenkins_home/workspace/demo/demoWeb/target/demo.war" -O - -q'
                 }
