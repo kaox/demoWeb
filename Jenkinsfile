@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stage('Clone') { 
-            steps {   
+            steps {     
                 sh 'git clone ${GIT_URL}' 
             }
         }
